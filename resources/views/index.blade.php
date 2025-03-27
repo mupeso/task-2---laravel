@@ -27,97 +27,37 @@
         </div>
     </div>
     <div class="container">
-        <h2 class="h1 fw-bold text-center my-4">majors</h2>
+        <h2 class="h1 fw-bold text-center my-4">Major</h2>
+
         <div class="d-flex flex-wrap gap-4 justify-content-center">
-            <div class="card p-2" style="width: 18rem;">
-                <img src="assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle" alt="major">
-                <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                    <h4 class="card-title fw-bold text-center">Major title</h4>
-                    <a href="{{route("index")}}" class="btn btn-outline-primary card-button">Browse Doctors</a>
+            @foreach ($x as $y)
+                <div class="card p-2" style="width: 18rem;">
+                    <img src="assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle" alt="major">
+                    <div class="card-body d-flex flex-column gap-1 justify-content-center">
+                        <h4 class="card-title fw-bold text-center">{{ $y->major->major }}</h4>
+                        <a href="{{route("index")}}" class="btn btn-outline-primary card-button">Browse Doctors</a>
+                    </div>
                 </div>
-            </div>
-            <div class="card p-2" style="width: 18rem;">
-                <img src="assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle" alt="major">
-                <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                    <h4 class="card-title fw-bold text-center">Major title</h4>
-                    <a href="{{route("index")}}" class="btn btn-outline-primary card-button">Browse Doctors</a>
-                </div>
-            </div>
-            <div class="card p-2" style="width: 18rem;">
-                <img src="assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle" alt="major">
-                <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                    <h4 class="card-title fw-bold text-center">Major title</h4>
-                    <a href="{{route("index")}}" class="btn btn-outline-primary card-button">Browse Doctors</a>
-                </div>
-            </div>
-            <div class="card p-2" style="width: 18rem;">
-                <img src="assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle" alt="major">
-                <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                    <h4 class="card-title fw-bold text-center">Major title</h4>
-                    <a href="{{route("index")}}" class="btn btn-outline-primary card-button">Browse Doctors</a>
-                </div>
-            </div>
-            <div class="card p-2" style="width: 18rem;">
-                <img src="assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle" alt="major">
-                <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                    <h4 class="card-title fw-bold text-center">Major title</h4>
-                    <a href="{{route("index")}}" class="btn btn-outline-primary card-button">Browse Doctors</a>
-                </div>
-            </div>
-            <div class="card p-2" style="width: 18rem;">
-                <img src="assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle" alt="major">
-                <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                    <h4 class="card-title fw-bold text-center">Major title</h4>
-                    <a href="{{route("index")}}" class="btn btn-outline-primary card-button">Browse Doctors</a>
-                </div>
-            </div>
-            <div class="card p-2" style="width: 18rem;">
-                <img src="assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle" alt="major">
-                <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                    <h4 class="card-title fw-bold text-center">Major title</h4>
-                    <a href="{{route("index")}}" class="btn btn-outline-primary card-button">Browse Doctors</a>
-                </div>
-            </div>
-            <div class="card p-2" style="width: 18rem;">
-                <img src="assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle" alt="major">
-                <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                    <h4 class="card-title fw-bold text-center">Major title</h4>
-                    <a href="{{route("index")}}" class="btn btn-outline-primary card-button">Browse Doctors</a>
-                </div>
-            </div>
+            @endforeach
         </div>
-        <h2 class="h1 fw-bold text-center my-4">Doctors</h2>
+        
+
+        <h2 class="h1 fw-bold text-center my-4">Doctor</h2>
             <div class="d-flex flex-wrap gap-4 justify-content-center">
+                @foreach ($x as $y)
+
                 <div class="card p-2" style="width: 18rem;">
                     <img src="assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle"
                         alt="major">
                     <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                        <h4 class="card-title fw-bold text-center">Doctor Name</h4>
-                        <h6 class="card-title fw-bold text-center">Major</h6>
+                        <h4 class="card-title fw-bold text-center">{{$y->name}}</h4>
+                        <h6 class="card-title fw-bold text-center">{{ $y->major->major }}</h6>
 
                         <a href="{{route("doctor")}}" class="btn btn-outline-primary card-button">Browse Doctors</a>
                     </div>
                 </div>
-                <div class="card p-2" style="width: 18rem;">
-                    <img src="assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle"
-                        alt="major">
-                    <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                        <h4 class="card-title fw-bold text-center">Doctor Name</h4>
-                        <h6 class="card-title fw-bold text-center">Major</h6>
+                @endforeach
 
-                        <a href="{{route("doctor")}}" class="btn btn-outline-primary card-button">Browse Doctors</a>
-                    </div>
-                </div>
-                <div class="card p-2" style="width: 18rem;">
-                    <img src="assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle"
-                        alt="major">
-                    <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                        <h4 class="card-title fw-bold text-center">Doctor Name</h4>
-                        <h6 class="card-title fw-bold text-center">Major</h6>
-
-                        <a href="{{route("doctor")}}" class="btn btn-outline-primary card-button">Browse Doctors</a>
-                    </div>
-                </div>
     </div>
     <div class="banner container d-block d-lg-grid d-md-block d-sm-block">
         <div class="info">

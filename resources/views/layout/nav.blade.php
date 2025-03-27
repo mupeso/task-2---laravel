@@ -17,9 +17,17 @@
                         <a type="button" class="btn btn-outline-light navigation--button"
                             href="{{ route("majors") }}">majors</a>
                         <a type="button" class="btn btn-outline-light navigation--button"
-                            href="{{route(name: "index")}}">Doctors</a>
+                            href="{{route( "index")}}">Doctors</a>
+                            <a type="button" class="btn btn-outline-light navigation--button"
+                            href="{{route( "Services")}}">Services</a>
+                           
                         @auth
-
+                        {{-- <a type="button" class="btn btn-outline-light navigation--button"
+                        href="{{route( "logout")}}">LogOut</a> --}}
+                        <form method="POST" action="{{ route('logout') }}" class="d-inline">
+                            @csrf
+                            <button type="submit" class="btn btn-outline-light navigation--button">Logout</button>
+                        </form>
                         @else
                             <a type="button" class="btn btn-outline-light navigation--button"
                                 href="{{ route("login") }}">login</a>

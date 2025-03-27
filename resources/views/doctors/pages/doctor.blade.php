@@ -63,6 +63,8 @@
               height="150"
               width="150"
             />
+              
+            
             <div class="details-info d-flex flex-column gap-3">
               <h4 class="card-title fw-bold">Doctor name</h4>
               <h6 class="card-title fw-bold">
@@ -71,6 +73,8 @@
             </div>
           </div>
           <hr />
+          
+
           <form class="form">
             <div class="form-items">
               <div class="mb-3">
