@@ -12,6 +12,8 @@ class Doctor extends Model
     // public function service(){
     //     return $this->belongsTo(service::class);
     // }
+    protected $fillable=["name","service_id","major_id"];
+
 
     public function major(){
         return $this->belongsTo(Major::class);

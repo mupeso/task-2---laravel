@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\AddDoctorController;
+use App\Http\Controllers\AddMajorController;
+use App\Http\Controllers\AddServicesController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DoctorController;
@@ -33,14 +36,28 @@ Route::get('/history',[HistoryController::class,"index"])->name("history");
 Route::post("/logout",[AuthenticatedSessionController::class,"destroy"])->name("logout");
 
 Route::get('/majors', [MajorsController::class,"index"])->name("majors");
+Route::get("/addmajor",[AddMajorController::class,"index"])->name(name: "add.major");
+Route::post("/addmajor/create",[AddMajorController::class,"store"])->name(name: "add.major.add");
+
+
 
 
 
 Route::get('/index', [IndexController::class,"index"])->name("index");
 
 Route::get('/doctor', [DoctorController::class,"index"])->name("doctor");
-Route::get('/Services', [ServicesController::class,"index"])->name("Services");
+Route::post('/doctor/reservation', [DoctorController::class,"store"])->name("doctor.reservation");
 
+Route::get('/Services', [ServicesController::class,"index"])->name("Services");
+Route::get("/addServices",[AddServicesController::class,"index"])->name(name: "add.Services");
+Route::post("/addServices/add",[AddServicesController::class,"store"])->name(name: "add.Services.add");
+
+
+
+
+
+Route::get("/adddoctor",[AddDoctorController::class,"index"])->name(name: "add.doctor");
+Route::post("/adddoctor/add",[AddDoctorController::class,"store"])->name(name: "add.doctor.add");
 
 
 

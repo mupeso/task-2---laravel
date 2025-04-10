@@ -26,6 +26,12 @@
             </div>
         </div>
         @endforeach
+        <nav class="mt-5" aria-label="navigation">
+            <ul class="pagination justify-content-center">
+                <a href="{{route("add.Services")}}" class="btn btn-primary">ِAdd Services</a>
+    
+            </ul>
+        </nav>
     </div>
 </div>
 @endsection

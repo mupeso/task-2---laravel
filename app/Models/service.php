@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class service extends Model
 {
     use HasFactory;
+    protected $fillable=["title"];
 
     public function service(){
             return $this->hasOne(Doctor::class);
